@@ -9,6 +9,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 st.title('Penguin Classifier')
 st.write('This app uses the Palmer Penguins dataset to classify penguin species based on user inputs')
+password_guess = st.text_input('What is the Password?')
+if password_guess != st.secretes["password"]:
+    st.stop()
+
 
 penguin_df =pd.read_csv("penguins.csv")
 
